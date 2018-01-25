@@ -5,7 +5,7 @@ source venv/bin/activate -- To activate virtual environment
 
 *** clone the Git Repository ******
 
-git clone https://github.com/kpurna/credr.git
+git clone https://github.com/kpurna/bjsbuzz.git
 
 install the requirements.txt file for installing required packages
 
@@ -51,7 +51,7 @@ python manage.py runserver -- To run project in local.
 
 ********Create a new record in db*****
 method:POST
-url: http://localhost:8000/v1/users/
+url: http://purnachandra.pythonanywhere.com/v1/users/
 
 {
   "username" : "purna",
@@ -72,15 +72,19 @@ url: http://localhost:8000/v1/users/
 }
 
 method:PATCH
-url: http://localhost:8000/v1/users/
+url: http://purnachandra.pythonanywhere.com/v1/users/
 {
   "company":"any it",
   "candidate_desc":"php, python"
 }
 
+method:GET
+url: http://purnachandra.pythonanywhere.com/v1/users/1
+
+
 ********add record to users comments from user end *****
 method: POST
-url: http://localhost:8000/v1/users-comments/
+url: http://purnachandra.pythonanywhere.com/v1/users-comments/
 
 {
   "uid" : 2,
@@ -90,7 +94,7 @@ url: http://localhost:8000/v1/users-comments/
 ********update users comments from admin end *****
 
 method: PATCH
-url: http://localhost:8000/v1/users-comments/1
+url: http://purnachandra.pythonanywhere.com/v1/users-comments/1
 
 {
   "uid" : 2,
@@ -98,8 +102,12 @@ url: http://localhost:8000/v1/users-comments/1
   "is_answered": 1
 }
 
+method: GET
+url: http://purnachandra.pythonanywhere.com/v1/users-comments/1
+
 
 ************ GET Record **************
+///////// get all the records from respective table
 
-http://localhost:8000/v0/user-details   ///////// get all the records from user table
-http://localhost:8000/v0/users-comments/ /// get particluar reordc with id specified
+http://purnachandra.pythonanywhere.com/v0/user-details/   
+http://purnachandra.pythonanywhere.com/v0/users-comments/ 
